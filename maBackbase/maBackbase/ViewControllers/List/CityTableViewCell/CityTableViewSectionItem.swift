@@ -21,7 +21,12 @@ final class CityTableViewSectionItem: CollectionSectionItem<TableViewCollectionB
     // MARK: - Private
 
     private class func setupSectionItemsWith(_ data: [City]) -> [TableViewCollectionBuildItem] {
-        let buildItems: [TableViewCollectionBuildItem] = data.compactMap({ CityTableViewCellBuildItem($0) })
+        var buildItems: [TableViewCollectionBuildItem] = data.compactMap({ CityTableViewCellBuildItem($0) })
+
+        if buildItems.isEmpty {
+            let noResultBuildItem = NoResultFoundTableViewCellBuildItem()
+            buildItems.append(noResultBuildItem)
+        }
 
         return buildItems
     }

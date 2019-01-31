@@ -21,7 +21,8 @@ final class ListViewControllerDataProvider: TableViewDataProvider {
     override internal var buildItemTypes: [TableViewCollectionBuildItem.Type] {
         get {
             return [
-                CityTableViewCellBuildItem.self
+                CityTableViewCellBuildItem.self,
+                NoResultFoundTableViewCellBuildItem.self
             ]
         }
     }
@@ -109,6 +110,13 @@ final class ListViewControllerDataProvider: TableViewDataProvider {
     // MARK: - Private
 
     private func populateInitialData(_ cities: [City]) {
+
+        let isEmptyUpdate = cities.isEmpty && !items[0].items.filter({ $0 is NoResultFoundTableViewCellBuildItem }).isEmpty
+
+        if isEmptyUpdate {
+            return
+        }
+
         let section = CityTableViewSectionItem(cities)
         items.removeAll()
         items.append(section)

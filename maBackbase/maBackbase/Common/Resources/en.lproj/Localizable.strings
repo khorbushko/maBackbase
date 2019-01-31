@@ -14,6 +14,7 @@
 "listViewContoroller.loading.info" = "Loading content...";
 "listViewContoroller.loading.info.failure" = "Oops!\nSomething went wrong :(";
 "listViewController.loading.progressTemplate" = "%.2f %%";
+"listViewController.search.noResult" = "Oops!\nNo result found :(";
 
 "mapViewController.title" = "Citi of ";
 "mapView.annotation.country" = "Country: %@ ; ";

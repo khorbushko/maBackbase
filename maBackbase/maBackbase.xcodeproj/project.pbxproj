@@ -81,6 +81,12 @@
 		0ED940B9220387F400B12192 /* SearchCachedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940B72203851D00B12192 /* SearchCachedValue.swift */; };
 		0ED940BB220389AB00B12192 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940BA220389AB00B12192 /* String+Substring.swift */; };
 		0ED940BC220389F900B12192 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940BA220389AB00B12192 /* String+Substring.swift */; };
+		0ED940BF2203A48000B12192 /* NoResultFoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940BE2203A48000B12192 /* NoResultFoundTableViewCell.swift */; };
+		0ED940C02203A48000B12192 /* NoResultFoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940BE2203A48000B12192 /* NoResultFoundTableViewCell.swift */; };
+		0ED940C22203A4A800B12192 /* NoResultFoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED940C12203A4A800B12192 /* NoResultFoundTableViewCell.xib */; };
+		0ED940C32203A4A800B12192 /* NoResultFoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED940C12203A4A800B12192 /* NoResultFoundTableViewCell.xib */; };
+		0ED940C52203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940C42203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift */; };
+		0ED940C62203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940C42203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +146,9 @@
 		0ED940B52203483800B12192 /* Double+CompareInRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+CompareInRange.swift"; sourceTree = "<group>"; };
 		0ED940B72203851D00B12192 /* SearchCachedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCachedValue.swift; sourceTree = "<group>"; };
 		0ED940BA220389AB00B12192 /* String+Substring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Substring.swift"; sourceTree = "<group>"; };
+		0ED940BE2203A48000B12192 /* NoResultFoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultFoundTableViewCell.swift; sourceTree = "<group>"; };
+		0ED940C12203A4A800B12192 /* NoResultFoundTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoResultFoundTableViewCell.xib; sourceTree = "<group>"; };
+		0ED940C42203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultFoundTableViewCellBuildItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +311,7 @@
 		0E79A04C2202DEB200251BD3 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				0ED940BD2203A46D00B12192 /* NoResultFoundTableViewCell */,
 				0E79A0532202DF7300251BD3 /* CityTableViewCell */,
 				0E79A04D2202DEBA00251BD3 /* ListViewController.swift */,
 				0E79A0502202DF2E00251BD3 /* ListViewControllerDataProvider.swift */,
@@ -354,6 +364,16 @@
 				0E79A08E2203053600251BD3 /* CityCenterPointAnnotation.swift */,
 			);
 			path = Annotations;
+			sourceTree = "<group>";
+		};
+		0ED940BD2203A46D00B12192 /* NoResultFoundTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0ED940BE2203A48000B12192 /* NoResultFoundTableViewCell.swift */,
+				0ED940C12203A4A800B12192 /* NoResultFoundTableViewCell.xib */,
+				0ED940C42203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift */,
+			);
+			path = NoResultFoundTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +458,7 @@
 			files = (
 				0E79A0582202DF8500251BD3 /* CityTableViewCell.xib in Resources */,
 				0E79A0202202443E00251BD3 /* cities.json in Resources */,
+				0ED940C22203A4A800B12192 /* NoResultFoundTableViewCell.xib in Resources */,
 				0E79A00422023DBA00251BD3 /* LaunchScreen.storyboard in Resources */,
 				0E79A0672202E43800251BD3 /* Localizable.strings in Resources */,
 				0E79A00122023DBA00251BD3 /* Assets.xcassets in Resources */,
@@ -453,6 +474,7 @@
 			files = (
 				0E79A0592202DF8500251BD3 /* CityTableViewCell.xib in Resources */,
 				0E79A0682202E43800251BD3 /* Localizable.strings in Resources */,
+				0ED940C32203A4A800B12192 /* NoResultFoundTableViewCell.xib in Resources */,
 				0E79A0232202449700251BD3 /* cities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +501,7 @@
 				0E79A0802202FECC00251BD3 /* MapViewControllerDataProvider.swift in Sources */,
 				0E79A04A2202DDCA00251BD3 /* UITableViewCell+BuildItems.swift in Sources */,
 				0E79A07A2202FB1700251BD3 /* MapViewController.swift in Sources */,
+				0ED940BF2203A48000B12192 /* NoResultFoundTableViewCell.swift in Sources */,
 				0E79A04E2202DEBA00251BD3 /* ListViewController.swift in Sources */,
 				0E79A0722202F3B800251BD3 /* CAAnimation+Block.swift in Sources */,
 				0E79A08B2203025F00251BD3 /* UINavigationItem+BackButton.swift in Sources */,
@@ -489,6 +512,7 @@
 				0E79A05B2202DF8D00251BD3 /* CityTableViewCellBuildItem.swift in Sources */,
 				0E79A0412202DD4300251BD3 /* Buildable.swift in Sources */,
 				0E79A0442202DD5900251BD3 /* CollectionSectionItem.swift in Sources */,
+				0ED940C52203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift in Sources */,
 				0E79A026220245DF00251BD3 /* FileType.swift in Sources */,
 				0E79A0552202DF7E00251BD3 /* CityTableViewCell.swift in Sources */,
 				0E79A06C2202ED1700251BD3 /* UINavigationbar+Styling.swift in Sources */,
@@ -515,6 +539,7 @@
 				0E79A0452202DD5900251BD3 /* CollectionSectionItem.swift in Sources */,
 				0E79A03C2202DCEB00251BD3 /* TableViewCollectionBuildItem.swift in Sources */,
 				0E79A0812202FECC00251BD3 /* MapViewControllerDataProvider.swift in Sources */,
+				0ED940C02203A48000B12192 /* NoResultFoundTableViewCell.swift in Sources */,
 				0E79A0392202DCD400251BD3 /* TableViewDataProvider.swift in Sources */,
 				0E79A07B2202FB1700251BD3 /* MapViewController.swift in Sources */,
 				0E79A00F22023DBA00251BD3 /* DatFileReadingTests.swift in Sources */,
@@ -522,6 +547,7 @@
 				0E79A08C2203025F00251BD3 /* UINavigationItem+BackButton.swift in Sources */,
 				0E79A0292202487200251BD3 /* FileType.swift in Sources */,
 				0E79A07E2202FC0F00251BD3 /* UIViewController+MultiLineTitle.swift in Sources */,
+				0ED940C62203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift in Sources */,
 				0E79A0422202DD4300251BD3 /* Buildable.swift in Sources */,
 				0E79A0522202DF2E00251BD3 /* ListViewControllerDataProvider.swift in Sources */,
 				0E79A04B2202DDCA00251BD3 /* UITableViewCell+BuildItems.swift in Sources */,
