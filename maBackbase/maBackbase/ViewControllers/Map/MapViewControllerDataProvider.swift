@@ -37,7 +37,6 @@ final class MapViewControllerDataProvider {
     init(city: City) {
 
         self.city = city
-
     }
 
     // MARK: - Public
