@@ -61,6 +61,21 @@
 		0E79A0732202F3B800251BD3 /* CAAnimation+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0712202F3B800251BD3 /* CAAnimation+Block.swift */; };
 		0E79A0752202F9B900251BD3 /* TableViewDataProvider+Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0742202F9B900251BD3 /* TableViewDataProvider+Reload.swift */; };
 		0E79A0762202F9B900251BD3 /* TableViewDataProvider+Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0742202F9B900251BD3 /* TableViewDataProvider+Reload.swift */; };
+		0E79A07A2202FB1700251BD3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0792202FB1700251BD3 /* MapViewController.swift */; };
+		0E79A07B2202FB1700251BD3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0792202FB1700251BD3 /* MapViewController.swift */; };
+		0E79A07D2202FC0F00251BD3 /* UIViewController+MultiLineTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A07C2202FC0F00251BD3 /* UIViewController+MultiLineTitle.swift */; };
+		0E79A07E2202FC0F00251BD3 /* UIViewController+MultiLineTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A07C2202FC0F00251BD3 /* UIViewController+MultiLineTitle.swift */; };
+		0E79A0802202FECC00251BD3 /* MapViewControllerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A07F2202FECC00251BD3 /* MapViewControllerDataProvider.swift */; };
+		0E79A0812202FECC00251BD3 /* MapViewControllerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A07F2202FECC00251BD3 /* MapViewControllerDataProvider.swift */; };
+		0E79A0832202FF6000251BD3 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0822202FF6000251BD3 /* Storyboard.swift */; };
+		0E79A0852203003800251BD3 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0822202FF6000251BD3 /* Storyboard.swift */; };
+		0E79A0882203020600251BD3 /* NavigationBarConfigurableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0872203020600251BD3 /* NavigationBarConfigurableViewController.swift */; };
+		0E79A0892203020600251BD3 /* NavigationBarConfigurableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0872203020600251BD3 /* NavigationBarConfigurableViewController.swift */; };
+		0E79A08B2203025F00251BD3 /* UINavigationItem+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A08A2203025F00251BD3 /* UINavigationItem+BackButton.swift */; };
+		0E79A08C2203025F00251BD3 /* UINavigationItem+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A08A2203025F00251BD3 /* UINavigationItem+BackButton.swift */; };
+		0E79A08F2203053600251BD3 /* CityCenterPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A08E2203053600251BD3 /* CityCenterPointAnnotation.swift */; };
+		0E79A090220305F900251BD3 /* CityCenterPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A08E2203053600251BD3 /* CityCenterPointAnnotation.swift */; };
+		0E79A092220307E900251BD3 /* Map.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E79A091220307E900251BD3 /* Map.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +124,14 @@
 		0E79A06E2202F39A00251BD3 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		0E79A0712202F3B800251BD3 /* CAAnimation+Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAAnimation+Block.swift"; sourceTree = "<group>"; };
 		0E79A0742202F9B900251BD3 /* TableViewDataProvider+Reload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewDataProvider+Reload.swift"; sourceTree = "<group>"; };
+		0E79A0792202FB1700251BD3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0E79A07C2202FC0F00251BD3 /* UIViewController+MultiLineTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MultiLineTitle.swift"; sourceTree = "<group>"; };
+		0E79A07F2202FECC00251BD3 /* MapViewControllerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerDataProvider.swift; sourceTree = "<group>"; };
+		0E79A0822202FF6000251BD3 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		0E79A0872203020600251BD3 /* NavigationBarConfigurableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfigurableViewController.swift; sourceTree = "<group>"; };
+		0E79A08A2203025F00251BD3 /* UINavigationItem+BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+BackButton.swift"; sourceTree = "<group>"; };
+		0E79A08E2203053600251BD3 /* CityCenterPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCenterPointAnnotation.swift; sourceTree = "<group>"; };
+		0E79A091220307E900251BD3 /* Map.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Map.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +206,8 @@
 		0E79A01A22023DEE00251BD3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E79A086220301F900251BD3 /* Base */,
+				0E79A0782202FB0E00251BD3 /* Map */,
 				0E79A04C2202DEB200251BD3 /* List */,
 				0E799FFD22023DB800251BD3 /* Main.storyboard */,
 			);
@@ -205,6 +230,7 @@
 				0E79A0362202DCC900251BD3 /* TableViewDataProvider */,
 				0E79A024220245D300251BD3 /* File */,
 				0E79A06E2202F39A00251BD3 /* Animator.swift */,
+				0E79A0822202FF6000251BD3 /* Storyboard.swift */,
 			);
 			path = SupportedClasses;
 			sourceTree = "<group>";
@@ -243,6 +269,8 @@
 				0E79A0492202DDCA00251BD3 /* UITableViewCell+BuildItems.swift */,
 				0E79A06B2202ED1700251BD3 /* UINavigationbar+Styling.swift */,
 				0E79A0712202F3B800251BD3 /* CAAnimation+Block.swift */,
+				0E79A07C2202FC0F00251BD3 /* UIViewController+MultiLineTitle.swift */,
+				0E79A08A2203025F00251BD3 /* UINavigationItem+BackButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,6 +316,33 @@
 				0E79A0742202F9B900251BD3 /* TableViewDataProvider+Reload.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		0E79A0782202FB0E00251BD3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				0E79A08D2203052B00251BD3 /* Annotations */,
+				0E79A0792202FB1700251BD3 /* MapViewController.swift */,
+				0E79A07F2202FECC00251BD3 /* MapViewControllerDataProvider.swift */,
+				0E79A091220307E900251BD3 /* Map.xcassets */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		0E79A086220301F900251BD3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0E79A0872203020600251BD3 /* NavigationBarConfigurableViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0E79A08D2203052B00251BD3 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				0E79A08E2203053600251BD3 /* CityCenterPointAnnotation.swift */,
+			);
+			path = Annotations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +431,7 @@
 				0E79A0672202E43800251BD3 /* Localizable.strings in Resources */,
 				0E79A00122023DBA00251BD3 /* Assets.xcassets in Resources */,
 				0E799FFF22023DB800251BD3 /* Main.storyboard in Resources */,
+				0E79A092220307E900251BD3 /* Map.xcassets in Resources */,
 				0E79A0612202E13900251BD3 /* List.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,17 +454,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E79A06F2202F39A00251BD3 /* Animator.swift in Sources */,
+				0E79A0882203020600251BD3 /* NavigationBarConfigurableViewController.swift in Sources */,
 				0E79A03B2202DCEB00251BD3 /* TableViewCollectionBuildItem.swift in Sources */,
 				0E79A03022024D2C00251BD3 /* Coordinate.swift in Sources */,
 				0E79A0222202444C00251BD3 /* DataFile.swift in Sources */,
+				0E79A0832202FF6000251BD3 /* Storyboard.swift in Sources */,
 				0E79A0512202DF2E00251BD3 /* ListViewControllerDataProvider.swift in Sources */,
 				0E79A03E2202DCFC00251BD3 /* CollectionBuildItem.swift in Sources */,
+				0E79A08F2203053600251BD3 /* CityCenterPointAnnotation.swift in Sources */,
 				0E79A02E22024A1700251BD3 /* City.swift in Sources */,
 				0E799FFA22023DB800251BD3 /* AppDelegate.swift in Sources */,
+				0E79A0802202FECC00251BD3 /* MapViewControllerDataProvider.swift in Sources */,
 				0E79A04A2202DDCA00251BD3 /* UITableViewCell+BuildItems.swift in Sources */,
+				0E79A07A2202FB1700251BD3 /* MapViewController.swift in Sources */,
 				0E79A04E2202DEBA00251BD3 /* ListViewController.swift in Sources */,
 				0E79A0722202F3B800251BD3 /* CAAnimation+Block.swift in Sources */,
+				0E79A08B2203025F00251BD3 /* UINavigationItem+BackButton.swift in Sources */,
 				0E79A0282202474800251BD3 /* FileReadingError.swift in Sources */,
+				0E79A07D2202FC0F00251BD3 /* UIViewController+MultiLineTitle.swift in Sources */,
 				0E79A0382202DCD400251BD3 /* TableViewDataProvider.swift in Sources */,
 				0E79A05B2202DF8D00251BD3 /* CityTableViewCellBuildItem.swift in Sources */,
 				0E79A0412202DD4300251BD3 /* Buildable.swift in Sources */,
@@ -427,17 +490,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E79A0702202F39A00251BD3 /* Animator.swift in Sources */,
+				0E79A0892203020600251BD3 /* NavigationBarConfigurableViewController.swift in Sources */,
 				0E79A0482202DDA400251BD3 /* UITableViewHeaderFooterView+BuildItems.swift in Sources */,
 				0E79A05F2202DF9700251BD3 /* CityTableViewSectionItem.swift in Sources */,
 				0E79A0632202E3B800251BD3 /* City.swift in Sources */,
+				0E79A0852203003800251BD3 /* Storyboard.swift in Sources */,
 				0E79A02A2202487200251BD3 /* DataFile.swift in Sources */,
 				0E79A02B2202487200251BD3 /* FileReadingError.swift in Sources */,
+				0E79A090220305F900251BD3 /* CityCenterPointAnnotation.swift in Sources */,
 				0E79A0452202DD5900251BD3 /* CollectionSectionItem.swift in Sources */,
 				0E79A03C2202DCEB00251BD3 /* TableViewCollectionBuildItem.swift in Sources */,
+				0E79A0812202FECC00251BD3 /* MapViewControllerDataProvider.swift in Sources */,
 				0E79A0392202DCD400251BD3 /* TableViewDataProvider.swift in Sources */,
+				0E79A07B2202FB1700251BD3 /* MapViewController.swift in Sources */,
 				0E79A00F22023DBA00251BD3 /* DatFileReadingTests.swift in Sources */,
 				0E79A0732202F3B800251BD3 /* CAAnimation+Block.swift in Sources */,
+				0E79A08C2203025F00251BD3 /* UINavigationItem+BackButton.swift in Sources */,
 				0E79A0292202487200251BD3 /* FileType.swift in Sources */,
+				0E79A07E2202FC0F00251BD3 /* UIViewController+MultiLineTitle.swift in Sources */,
 				0E79A0422202DD4300251BD3 /* Buildable.swift in Sources */,
 				0E79A0522202DF2E00251BD3 /* ListViewControllerDataProvider.swift in Sources */,
 				0E79A04B2202DDCA00251BD3 /* UITableViewCell+BuildItems.swift in Sources */,

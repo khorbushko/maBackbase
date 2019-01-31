@@ -238,6 +238,8 @@ extension ListViewController: ListViewControllerDataProviderDelegate {
     // MARK: - ListViewControllerDataProviderDelegate
 
     func didSelecteItem(_ city: City) {
-        // todo
+        closeButtonAction(self)
+        let controller = MapViewController.create(city)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
