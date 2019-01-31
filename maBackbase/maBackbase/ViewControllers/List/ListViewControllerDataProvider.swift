@@ -117,10 +117,10 @@ final class ListViewControllerDataProvider: TableViewDataProvider {
             return
         }
 
+        self.items.removeAll()
         let section = CityTableViewSectionItem(cities)
-        items.removeAll()
-        items.append(section)
-        animatedTableViewReload()
+        self.items.append(section)
+        self.animatedTableViewReload()
     }
 }
 

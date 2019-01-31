@@ -21,9 +21,9 @@ final class CityTableViewCellBuildItem: TableViewCollectionBuildItem {
             var stringToReturn: String?
             if let cityName = city?.name,
                 let cityCountry = city?.country {
-                stringToReturn = cityName + ", " + cityCountry.uppercased()
+                stringToReturn = cityName.capitalized + ", " + cityCountry.uppercased()
             }
-            return stringToReturn?.capitalized
+            return stringToReturn
         }
     }
 

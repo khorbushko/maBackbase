@@ -7,9 +7,8 @@
 //
 
 import XCTest
-@testable import maBackbase
 
-class DatFileReadingTests: XCTestCase {
+final class DatFileReadingTests: XCTestCase {
 
     // MARK: - DatFileReading preformance
 

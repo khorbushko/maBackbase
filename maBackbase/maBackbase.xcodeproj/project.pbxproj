@@ -12,9 +12,7 @@
 		0E79A00122023DBA00251BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E79A00022023DBA00251BD3 /* Assets.xcassets */; };
 		0E79A00422023DBA00251BD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E79A00222023DBA00251BD3 /* LaunchScreen.storyboard */; };
 		0E79A00F22023DBA00251BD3 /* DatFileReadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A00E22023DBA00251BD3 /* DatFileReadingTests.swift */; };
-		0E79A0202202443E00251BD3 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E79A01F2202443E00251BD3 /* cities.json */; };
 		0E79A0222202444C00251BD3 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0212202444C00251BD3 /* DataFile.swift */; };
-		0E79A0232202449700251BD3 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E79A01F2202443E00251BD3 /* cities.json */; };
 		0E79A026220245DF00251BD3 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A025220245DF00251BD3 /* FileType.swift */; };
 		0E79A0282202474800251BD3 /* FileReadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A0272202474800251BD3 /* FileReadingError.swift */; };
 		0E79A0292202487200251BD3 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A025220245DF00251BD3 /* FileType.swift */; };
@@ -87,6 +85,10 @@
 		0ED940C32203A4A800B12192 /* NoResultFoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED940C12203A4A800B12192 /* NoResultFoundTableViewCell.xib */; };
 		0ED940C52203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940C42203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift */; };
 		0ED940C62203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940C42203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift */; };
+		0ED940C72203A7B000B12192 /* Double+CompareInRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940B52203483800B12192 /* Double+CompareInRange.swift */; };
+		0ED940C92203AACB00B12192 /* SearchCachedValueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED940C82203AACB00B12192 /* SearchCachedValueTest.swift */; };
+		0ED940CE2203AD7400B12192 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E79A01F2202443E00251BD3 /* cities.json */; };
+		0ED940CF2203AE4E00B12192 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E79A01F2202443E00251BD3 /* cities.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +151,7 @@
 		0ED940BE2203A48000B12192 /* NoResultFoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultFoundTableViewCell.swift; sourceTree = "<group>"; };
 		0ED940C12203A4A800B12192 /* NoResultFoundTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoResultFoundTableViewCell.xib; sourceTree = "<group>"; };
 		0ED940C42203A53100B12192 /* NoResultFoundTableViewCellBuildItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultFoundTableViewCellBuildItem.swift; sourceTree = "<group>"; };
+		0ED940C82203AACB00B12192 /* SearchCachedValueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCachedValueTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				0E79A00E22023DBA00251BD3 /* DatFileReadingTests.swift */,
+				0ED940C82203AACB00B12192 /* SearchCachedValueTest.swift */,
 				0E79A01022023DBA00251BD3 /* Info.plist */,
 			);
 			path = maBackbaseTests;
@@ -457,12 +461,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E79A0582202DF8500251BD3 /* CityTableViewCell.xib in Resources */,
-				0E79A0202202443E00251BD3 /* cities.json in Resources */,
 				0ED940C22203A4A800B12192 /* NoResultFoundTableViewCell.xib in Resources */,
 				0E79A00422023DBA00251BD3 /* LaunchScreen.storyboard in Resources */,
 				0E79A0672202E43800251BD3 /* Localizable.strings in Resources */,
 				0E79A00122023DBA00251BD3 /* Assets.xcassets in Resources */,
 				0E799FFF22023DB800251BD3 /* Main.storyboard in Resources */,
+				0ED940CE2203AD7400B12192 /* cities.json in Resources */,
 				0E79A092220307E900251BD3 /* Map.xcassets in Resources */,
 				0E79A0612202E13900251BD3 /* List.xcassets in Resources */,
 			);
@@ -472,10 +476,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED940CF2203AE4E00B12192 /* cities.json in Resources */,
 				0E79A0592202DF8500251BD3 /* CityTableViewCell.xib in Resources */,
 				0E79A0682202E43800251BD3 /* Localizable.strings in Resources */,
 				0ED940C32203A4A800B12192 /* NoResultFoundTableViewCell.xib in Resources */,
-				0E79A0232202449700251BD3 /* cities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED940C92203AACB00B12192 /* SearchCachedValueTest.swift in Sources */,
 				0E79A0702202F39A00251BD3 /* Animator.swift in Sources */,
 				0E79A0892203020600251BD3 /* NavigationBarConfigurableViewController.swift in Sources */,
 				0E79A0482202DDA400251BD3 /* UITableViewHeaderFooterView+BuildItems.swift in Sources */,
@@ -540,6 +545,7 @@
 				0E79A03C2202DCEB00251BD3 /* TableViewCollectionBuildItem.swift in Sources */,
 				0E79A0812202FECC00251BD3 /* MapViewControllerDataProvider.swift in Sources */,
 				0ED940C02203A48000B12192 /* NoResultFoundTableViewCell.swift in Sources */,
+				0ED940C72203A7B000B12192 /* Double+CompareInRange.swift in Sources */,
 				0E79A0392202DCD400251BD3 /* TableViewDataProvider.swift in Sources */,
 				0E79A07B2202FB1700251BD3 /* MapViewController.swift in Sources */,
 				0E79A00F22023DBA00251BD3 /* DatFileReadingTests.swift in Sources */,
