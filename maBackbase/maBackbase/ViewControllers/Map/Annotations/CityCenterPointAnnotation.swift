@@ -33,8 +33,8 @@ final class CityCenterPointAnnotation: NSObject, MKAnnotation {
 
     init(city: City) {
         coordinate = city.coordinate.point
-        title = city.name
-        country = city.country
+        title = city.name.capitalized
+        country = city.country.uppercased()
 
         let lat = city.coordinate.latitude
         let lon = city.coordinate.longitude
@@ -42,7 +42,7 @@ final class CityCenterPointAnnotation: NSObject, MKAnnotation {
         let lonString = String(format: NSLocalizedString("listViewController.cell.lontitude", comment: ""), lon)
         let stringToReturn = latString + ", " + lonString
 
-        let contryDescription = String(format: NSLocalizedString("mapView.annotation.country", comment: ""), city.country)
+        let contryDescription = String(format: NSLocalizedString("mapView.annotation.country", comment: ""), country)
 
         subtitle = contryDescription + stringToReturn
     }

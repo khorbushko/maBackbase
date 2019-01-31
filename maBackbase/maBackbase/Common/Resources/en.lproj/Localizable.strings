@@ -13,6 +13,7 @@
 "listViewContoroller.searchView.cancelButton.title" = "Cancel";
 "listViewContoroller.loading.info" = "Loading content...";
 "listViewContoroller.loading.info.failure" = "Oops!\nSomething went wrong :(";
+"listViewController.loading.progressTemplate" = "%.2f %%";
 
 "mapViewController.title" = "Citi of ";
 "mapView.annotation.country" = "Country: %@ ; ";

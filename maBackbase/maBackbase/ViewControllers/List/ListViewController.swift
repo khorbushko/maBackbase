@@ -10,8 +10,11 @@ import UIKit
 
 final class ListViewController: UIViewController {
 
-    @IBOutlet weak var loadingContentView: UIView!
-    @IBOutlet weak var loadingContentInfoLabel: UILabel!
+    @IBOutlet private weak var loadingContentView: UIView!
+    @IBOutlet private weak var loadingOveralProgressLabel: UILabel!
+    @IBOutlet private weak var loadingContentInfoLabel: UILabel!
+    @IBOutlet private weak var loadingProgressView: UIProgressView!
+
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private var dataProvider: ListViewControllerDataProvider! {
         didSet {
@@ -44,6 +47,7 @@ final class ListViewController: UIViewController {
         super.viewWillAppear(animated)
 
         navigationController?.navigationBar.applyDefaultStyle()
+        repopulateDataIfNeeded()
     }
 
     deinit {
@@ -53,22 +57,20 @@ final class ListViewController: UIViewController {
     // MARK: - IBAction
 
     @objc private func addSearchBar() {
-        navigationItem.setRightBarButton(nil, animated:true)
-        title = nil
-        presentSearchBarIfPossible()
+        if dataProvider.isDataAvailable {
+            navigationItem.setRightBarButton(nil, animated:true)
+            title = nil
+            presentSearchBarIfPossible()
+        }
     }
 
     @objc private func closeButtonAction(_ sender: AnyObject) {
-        guard let viewForNavigationBar = viewForNavigationBar else {
-            return
-        }
         navigationBarSearchBar.text = nil
-        setupInactiveBar()
+        hideSearchBar()
 
-        UIView.transition(with: viewForNavigationBar, duration: 0.3, options: [.transitionCrossDissolve, .curveEaseOut],
-                          animations: { [weak self] in
-                            self?.viewForNavigationBar?.removeFromSuperview()
-            }, completion: nil)
+        if dataProvider.isSearchActive {
+            dataProvider.displayAllData()
+        }
     }
 
     // MARK: - Private
@@ -162,6 +164,19 @@ final class ListViewController: UIViewController {
         }
     }
 
+    private func hideSearchBar() {
+        guard let viewForNavigationBar = viewForNavigationBar else {
+            assertionFailure("viewForNavigationBar nil")
+            return
+        }
+
+        setupInactiveBar()
+        UIView.transition(with: viewForNavigationBar, duration: 0.3, options: [.transitionCrossDissolve, .curveEaseOut],
+                          animations: { [weak self] in
+                            self?.viewForNavigationBar?.removeFromSuperview()
+            }, completion: nil)
+    }
+
     private func presentSearchBarIfPossible() {
         if let viewForNavigationBar = viewForNavigationBar {
             navigationBarSearchBar.becomeFirstResponder()
@@ -186,6 +201,15 @@ final class ListViewController: UIViewController {
                 self?.loadingContentInfoLabel.text = NSLocalizedString("listViewContoroller.loading.info.failure", comment: "")
                 self?.view.layoutIfNeeded()
             }
+        }
+    }
+
+    private func repopulateDataIfNeeded() {
+        if dataProvider.isSearchActive {
+            navigationBarSearchBar.delegate = nil
+            navigationBarSearchBar.text = dataProvider.currentSearchValue
+            navigationBarSearchBar.delegate = self
+            addSearchBar()
         }
     }
 
@@ -225,21 +249,36 @@ extension ListViewController: UISearchBarDelegate {
     // MARK: - UISearchBarDelegate
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // todo
+        if let text = searchBar.text {
+            dataProvider.searchValue(text)
+        }
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        dataProvider.searchValue(searchText)
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         closeButtonAction(searchBar)
+        dataProvider.displayAllData()
     }
 }
 
 extension ListViewController: ListViewControllerDataProviderDelegate {
-    
+
     // MARK: - ListViewControllerDataProviderDelegate
 
     func didSelecteItem(_ city: City) {
-        closeButtonAction(self)
+        hideSearchBar()
         let controller = MapViewController.create(city)
         navigationController?.pushViewController(controller, animated: true)
+    }
+
+    func didLoadDataProgress(_ progress: Float) {
+        DispatchQueue.main.async {
+            let template = NSLocalizedString("listViewController.loading.progressTemplate", comment: "")
+            self.loadingOveralProgressLabel.text = String(format: template, progress * 100)
+            self.loadingProgressView.progress = progress
+        }
     }
 }

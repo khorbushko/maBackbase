@@ -13,13 +13,13 @@ final class MapViewControllerDataProvider {
 
     var mainTitle: String {
         get {
-            return city.name
+            return city.name.capitalized
         }
     }
 
     var subTitle: String {
         get {
-            let subtitle = NSLocalizedString("mapViewController.title", comment: "") + city.country
+            let subtitle = NSLocalizedString("mapViewController.title", comment: "") + city.country.uppercased()
             return subtitle
         }
     }

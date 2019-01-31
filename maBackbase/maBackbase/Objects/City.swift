@@ -46,8 +46,8 @@ extension City: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CityDecodeKeys.self)
 
-        let countryValue: String = try container.decode(String.self, forKey: .country)
-        let nameValue: String = try container.decode(String.self, forKey: .name)
+        let countryValue: String = try container.decode(String.self, forKey: .country).lowercased()
+        let nameValue: String = try container.decode(String.self, forKey: .name).lowercased()
         let uniqIdValue: Int = try container.decode(Int.self, forKey: .uniqId)
         let coordinateValue: Coordinate = try container.decode(Coordinate.self, forKey: .coordinate)
 

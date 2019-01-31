@@ -11,6 +11,7 @@ import UIKit
 protocol ListViewControllerDataProviderDelegate: class {
 
     func didSelecteItem(_ city: City)
+    func didLoadDataProgress(_ progress: Float)
 }
 
 final class ListViewControllerDataProvider: TableViewDataProvider {
@@ -25,39 +26,91 @@ final class ListViewControllerDataProvider: TableViewDataProvider {
         }
     }
 
-    private var cities: [City] = []
+    private var searchCache: SearchCachedValue?
+
+    private (set) var currentSearchValue: String?
+
+    var isSearchActive: Bool {
+        get {
+            return currentSearchValue != nil
+        }
+    }
+
+    var isDataAvailable: Bool {
+        get {
+            return searchCache?.state == .ready
+        }
+    }
 
     // MARK: - Public
 
     func loadData(_ completion: ((Bool) -> ())?) {
+
+        let notifyFailure: (() -> ()) = {
+            DispatchQueue.main.async {
+                completion?(false)
+            }
+        }
+
+        delegate?.didLoadDataProgress(0.01)
+
         DispatchQueue.global().async { [weak self] in
             if let dataFile = DataFile(.cities) {
-                do  {
+                do {
+                    self?.delegate?.didLoadDataProgress(0.02)
+
                     var cities: [City] = try JSONDecoder().decode([City].self, from: dataFile.rawData)
                     cities.sort()
 
-                    DispatchQueue.main.async {
-                        self?.populateInitialData(cities)
-                        completion?(true)
-                    }
+                    self?.delegate?.didLoadDataProgress(0.03)
 
+                    self?.searchCache = SearchCachedValue(cities)
+                    self?.searchCache?.compute({ (progress) in
+                        self?.delegate?.didLoadDataProgress(progress / 1.05)
+                    }, completion: {
+                        DispatchQueue.main.async {
+                            if let all = self?.searchCache?.allObjects {
+                                self?.populateInitialData(all)
+                                completion?(true)
+                            } else {
+                                notifyFailure()
+                            }
+                        }
+                    })
                 } catch {
-                    DispatchQueue.main.async {
-                        completion?(false)
-                    }
+                    notifyFailure()
                 }
             } else {
-                DispatchQueue.main.async {
-                    completion?(false)
-                }
+                notifyFailure()
             }
         }
     }
 
-    private func populateInitialData(_ cities: [City]) {
-        self.cities = cities
+    // MARK: - Search
 
+    func searchValue(_ string: String) {
+        currentSearchValue = string
+
+        if string.isEmpty {
+            displayAllData()
+        } else {
+            let searchResult: [City] = searchCache?[string] ?? []
+            populateInitialData(searchResult)
+        }
+    }
+
+    func displayAllData() {
+        currentSearchValue = nil
+
+        let all: [City] = searchCache?.allObjects ?? []
+        populateInitialData(all)
+    }
+
+    // MARK: - Private
+
+    private func populateInitialData(_ cities: [City]) {
         let section = CityTableViewSectionItem(cities)
+        items.removeAll()
         items.append(section)
         animatedTableViewReload()
     }

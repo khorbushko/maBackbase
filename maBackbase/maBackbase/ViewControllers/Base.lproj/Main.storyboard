@@ -22,28 +22,44 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQV-2o-YoB" userLabel="CenteredConteiner">
-                                        <rect key="frame" x="150.5" y="253" width="74" height="97.5"/>
+                                        <rect key="frame" x="96.5" y="266.5" width="182" height="70.5"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Sv-Dd-suh">
-                                                <rect key="frame" x="18.5" y="8" width="37" height="37"/>
-                                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </activityIndicatorView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUs-Vt-OCc" userLabel="Info Label">
-                                                <rect key="frame" x="16" y="61" width="42" height="20.5"/>
+                                                <rect key="frame" x="70" y="16" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uF-6K-xqI" userLabel="Progress Label">
+                                                <rect key="frame" x="143.5" y="41.5" width="22.5" height="10"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="BTv-DB-swM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="10"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gsi-vT-0vy">
+                                                <rect key="frame" x="16" y="52.5" width="150" height="2"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="1jS-FE-E0o"/>
+                                                    <constraint firstAttribute="width" constant="150" id="Jhh-7M-1GU"/>
+                                                </constraints>
+                                            </progressView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="AUs-Vt-OCc" secondAttribute="trailing" constant="16" id="55V-ik-kNv"/>
-                                            <constraint firstItem="8Sv-Dd-suh" firstAttribute="centerX" secondItem="HQV-2o-YoB" secondAttribute="centerX" id="8Zb-JB-RZv"/>
-                                            <constraint firstItem="AUs-Vt-OCc" firstAttribute="top" secondItem="8Sv-Dd-suh" secondAttribute="bottom" constant="16" id="KTa-mY-PgR"/>
-                                            <constraint firstItem="AUs-Vt-OCc" firstAttribute="leading" secondItem="HQV-2o-YoB" secondAttribute="leading" constant="16" id="Nar-Bd-ACV"/>
-                                            <constraint firstItem="8Sv-Dd-suh" firstAttribute="top" secondItem="HQV-2o-YoB" secondAttribute="top" constant="8" id="Zi1-ro-RgH"/>
+                                            <constraint firstItem="AUs-Vt-OCc" firstAttribute="top" secondItem="HQV-2o-YoB" secondAttribute="top" constant="16" id="FXP-ip-vNx"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gsi-vT-0vy" secondAttribute="trailing" constant="16" id="LjU-ht-OY8"/>
+                                            <constraint firstItem="Gsi-vT-0vy" firstAttribute="leading" secondItem="HQV-2o-YoB" secondAttribute="leading" constant="16" id="ZaX-qX-U3v"/>
                                             <constraint firstItem="AUs-Vt-OCc" firstAttribute="centerX" secondItem="HQV-2o-YoB" secondAttribute="centerX" id="hAj-au-Mr8"/>
-                                            <constraint firstAttribute="bottom" secondItem="AUs-Vt-OCc" secondAttribute="bottom" constant="16" id="vLT-RW-xra"/>
+                                            <constraint firstItem="7uF-6K-xqI" firstAttribute="trailing" secondItem="Gsi-vT-0vy" secondAttribute="trailing" id="hIG-kb-0wV"/>
+                                            <constraint firstItem="Gsi-vT-0vy" firstAttribute="top" secondItem="AUs-Vt-OCc" secondAttribute="bottom" constant="16" id="iVO-ie-wdK"/>
+                                            <constraint firstItem="Gsi-vT-0vy" firstAttribute="top" secondItem="7uF-6K-xqI" secondAttribute="bottom" constant="1" id="kaS-9u-AGQ"/>
+                                            <constraint firstItem="7uF-6K-xqI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HQV-2o-YoB" secondAttribute="leading" constant="20" symbolic="YES" id="lKp-gK-15y"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gsi-vT-0vy" secondAttribute="bottom" constant="16" id="sCL-R8-RQ3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -82,6 +98,8 @@
                         <outlet property="dataProvider" destination="Krm-1i-VwB" id="dhl-ox-kyj"/>
                         <outlet property="loadingContentInfoLabel" destination="AUs-Vt-OCc" id="QDc-jd-j1b"/>
                         <outlet property="loadingContentView" destination="wRG-BM-aer" id="7mA-Gt-ECs"/>
+                        <outlet property="loadingOveralProgressLabel" destination="7uF-6K-xqI" id="S5s-tA-BPb"/>
+                        <outlet property="loadingProgressView" destination="Gsi-vT-0vy" id="56N-ID-iFg"/>
                         <outlet property="tableView" destination="LcC-RK-18h" id="Gcr-ve-6c3"/>
                     </connections>
                 </viewController>

@@ -37,6 +37,11 @@ struct Coordinate {
 
 extension Coordinate: Decodable {
 
+    enum CoordinateError: Error {
+
+        case invalidValueRange
+    }
+
     private enum CoordinateDecodeKeys: String, CodingKey {
         case latitude = "lat"
         case longitude = "lon"
@@ -50,7 +55,12 @@ extension Coordinate: Decodable {
         let latitudeValue: Double = try container.decode(Double.self, forKey: .latitude)
         let longitudeValue: Double = try container.decode(Double.self, forKey: .longitude)
 
-        latitude = latitudeValue
-        longitude = longitudeValue
+        if latitudeValue.insideRange((-90.0...90.0)),
+            longitudeValue.insideRange((-180.0...180.0)) {
+            latitude = latitudeValue
+            longitude = longitudeValue
+        } else {
+            throw CoordinateError.invalidValueRange
+        }
     }
 }

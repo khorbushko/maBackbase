@@ -21,9 +21,9 @@ final class CityTableViewCellBuildItem: TableViewCollectionBuildItem {
             var stringToReturn: String?
             if let cityName = city?.name,
                 let cityCountry = city?.country {
-                stringToReturn = cityName + ", " + cityCountry
+                stringToReturn = cityName + ", " + cityCountry.uppercased()
             }
-            return stringToReturn
+            return stringToReturn?.capitalized
         }
     }
 
@@ -36,7 +36,7 @@ final class CityTableViewCellBuildItem: TableViewCollectionBuildItem {
                 let lonString = String(format: NSLocalizedString("listViewController.cell.lontitude", comment: ""), lon)
                 stringToReturn = latString + ", " + lonString
             }
-            return stringToReturn
+            return stringToReturn?.capitalized
         }
     }
 
