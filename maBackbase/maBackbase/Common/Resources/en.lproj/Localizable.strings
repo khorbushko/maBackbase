@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  maBackbase
+
+  Created by Kirill Gorbushko on 1/31/19.
+  Copyright © 2019 - present. All rights reserved.
+*/
+
+"listViewController.cell.latitude" = "lat: %.4lf";
+"listViewController.cell.lontitude" = "lon: %.4lf";
+"listViewController.searchView.placeholder" = "Search";
+"listViewController.title" = "Cities";
+"listViewContoroller.searchView.cancelButton.title" = "Cancel";
+"listViewContoroller.loading.info" = "Loading content...";
+"listViewContoroller.loading.info.failure" = "Oops!\nSomething went wrong :(";
