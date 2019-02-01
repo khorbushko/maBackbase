@@ -19,16 +19,7 @@ enum SearchCachedValueState {
  SearchCachedValue - class that chached all search results possible
 
  Memoty optimization required
- Used only for demo and to meet
-
-
-        > .... more efficient for searches and display.
-
- Memory consumption ofcause not the best
-
- ## note
- For real project futher optimization in terms of memory usage is required
-
+ Used only for demo
  */
 final class SearchCachedValue {
 

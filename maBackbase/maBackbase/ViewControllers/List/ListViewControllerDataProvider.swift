@@ -111,10 +111,20 @@ final class ListViewControllerDataProvider: TableViewDataProvider {
 
     private func populateInitialData(_ cities: [City]) {
 
-        let isEmptyUpdate = cities.isEmpty && !items[0].items.filter({ $0 is NoResultFoundTableViewCellBuildItem }).isEmpty
+        if !items.isEmpty {
+            let isEmptyUpdate = cities.isEmpty && items.first?.items
+                .filter({ $0 is NoResultFoundTableViewCellBuildItem }).isEmpty == false
 
-        if isEmptyUpdate {
-            return
+            let displayedID = Set(items.first?.items
+                .compactMap({ ($0.dataObject as? City)?.uniqId }) ?? []
+            )
+            let foundedIds = Set(cities.compactMap({ $0.uniqId }))
+            let isSameDataAlreadyDisplayed = foundedIds.count == displayedID.count &&
+                                                foundedIds.isSubset(of: displayedID)
+
+            if isSameDataAlreadyDisplayed || isEmptyUpdate {
+                return
+            }
         }
 
         self.items.removeAll()
